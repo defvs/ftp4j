@@ -112,7 +112,7 @@ public class MLSDListParser implements FTPListParser {
 			if (sep == -1) {
 				throw new FTPListParseException();
 			}
-			String key = aux.substring(0, sep).trim();
+			String key = aux.substring(0, sep).trim().toLowerCase();
 			String value = aux.substring(sep + 1, aux.length()).trim();
 			if (key.length() == 0 || value.length() == 0) {
 				throw new FTPListParseException();
